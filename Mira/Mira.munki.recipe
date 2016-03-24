@@ -9,9 +9,9 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Mora</string>
+        <string>Mira</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/%NAME%</string>
+        <string>apps/utilities/%NAME%</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -19,11 +19,11 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Mira blah.</string>
+            <string>With mira, you can free yourself from the keyboard to streamline your activities. Get work done faster and easier, or enjoy convenience while relaxing with a movie. Uses for the Apple Remote are limited only by your imagination.</string>
             <key>category</key>
             <string>Utilities</string>
             <key>developer</key>
-            <string>Open Source</string>
+            <string>Twisted Melon Inc.</string>
             <key>display_name</key>
             <string>%NAME%</string>
             <key>name</key>
