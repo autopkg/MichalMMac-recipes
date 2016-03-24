@@ -1,0 +1,54 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the latest version of Subtitles, creates installer package and imports it into Munki repo</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.munki.Subtitles</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>Subtitles</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/utilities/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>The easiest way to download subtitles. Just drop your videos into Subtitles and let it do its magic. It doesn't matter if the files don't have the right name or the format they're in, Subtitles will always find the right subtitles for your movies and TV.</string>
+            <key>category</key>
+            <string>Utilities</string>
+            <key>developer</key>
+            <string>Rainy Cape S.L.</string>
+            <key>display_name</key>
+            <string>%NAME%</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.pkg.Subtitles</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
