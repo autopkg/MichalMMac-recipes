@@ -1,0 +1,56 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of MacGameStore and imports it into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.munki.MacGameStore</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MacGameStore</string>
+        <key>MGSURL</key>
+        <string>https://www.macgamestore.com/downloader/MGSCore5/MacGameStore.dmg</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/games/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>MacGameStore application is a client for MacGameStore.com with a lot of OS X games.</string>
+            <key>category</key>
+            <string>Games</string>
+            <key>developer</key>
+            <string>Mac Game Store Inc.</string>
+            <key>display_name</key>
+            <string>%NAME%</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.download.MacGameStore</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
