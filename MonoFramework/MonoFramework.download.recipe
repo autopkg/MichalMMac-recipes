@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Mono Framework.
 
-Default MONOPATTERN (http.*x86.pkg) download 32 bit version of framework.
+Default MONOPATTERN (http.*x86.pkg) downloads 32 bit version of framework.
 For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
 </string>
     <key>Identifier</key>
