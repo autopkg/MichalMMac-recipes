@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Mira disk image and imports it into Munki.</string>
+    <string>Downloads the current release version of Mira and imports it into Munki</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.Mira</string>
     <key>Input</key>
@@ -19,7 +19,7 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>With mira, you can free yourself from the keyboard to streamline your activities. Get work done faster and easier, or enjoy convenience while relaxing with a movie. Uses for the Apple Remote are limited only by your imagination.</string>
+            <string>Enables you to configure Apple remote behavior. Mira drops into your System Preferences and provides an easy interface to change button settings for all your applications. It even supports 12 different languages.</string>
             <key>category</key>
             <string>Utilities</string>
             <key>developer</key>

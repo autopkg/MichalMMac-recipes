@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Mira disk image</string>
+    <string>Downloads the current release version of Mira and installs it</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.install.Mira</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>FreeMind</string>
+        <string>Mira</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -23,7 +23,7 @@
             <key>Arguments</key>
             <dict>
                 <key>pkg_path</key>
-                <string>%pathname%</string>
+                <string>%pathname%/*.pkg</string>
             </dict>
         </dict>
     </array>
