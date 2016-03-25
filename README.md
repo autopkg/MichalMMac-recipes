@@ -1,2 +1,2 @@
-# autopkg-recipes
-Recipes for https://github.com/autopkg/autopkg
+# michalmmac-recipes
+Recipes for [AutoPkg](https://github.com/autopkg/autopkg)
