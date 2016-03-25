@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest Subtitles app</string>
+    <string>Downloads the current release version of Subtitles</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.Subtitles</string>
     <key>Input</key>
@@ -27,11 +27,6 @@
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%url%</string>
-            </dict>
         </dict>
         <dict>
             <key>Processor</key>

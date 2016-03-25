@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the latest version of Subtitles, creates installer package and imports it into Munki repo</string>
+    <string>Downloads the current release version of Subtitles creates a package and imports it into Munki</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.Subtitles</string>
     <key>Input</key>
@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>Subtitles</string>
         <key>MUNKI_REPO_SUBDIR</key>
-        <string>apps/utilities/%NAME%</string>
+        <string>apps/video/%NAME%</string>
         <key>pkginfo</key>
         <dict>
             <key>catalogs</key>
@@ -21,13 +21,17 @@
             <key>description</key>
             <string>The easiest way to download subtitles. Just drop your videos into Subtitles and let it do its magic. It doesn't matter if the files don't have the right name or the format they're in, Subtitles will always find the right subtitles for your movies and TV.</string>
             <key>category</key>
-            <string>Utilities</string>
+            <string>Video</string>
             <key>developer</key>
             <string>Rainy Cape S.L.</string>
             <key>display_name</key>
             <string>%NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>blocking_applications</key>
+            <array>
+                <string>Subtitles</string>
+            </array>
             <key>unattended_install</key>
             <true/>
         </dict>

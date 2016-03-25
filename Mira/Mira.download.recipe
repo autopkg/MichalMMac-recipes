@@ -26,6 +26,10 @@
                 <string>mira.dmg</string>
             </dict>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
         <dict>   
             <key>Processor</key>   
             <string>CodeSignatureVerifier</string>   
@@ -40,10 +44,6 @@
                     <string>Apple Root CA</string>
                 </array>
             </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
         </dict>
     </array>
 </dict>
