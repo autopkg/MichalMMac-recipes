@@ -27,7 +27,7 @@
                 <key>items_to_copy</key>
                 <array>
                     <dict>
-                        <key>source_path</key>
+                        <key>source_item</key>
                         <string>GameRanger.app</string>
                         <key>destination_path</key>
                         <string>/Applications</string>
