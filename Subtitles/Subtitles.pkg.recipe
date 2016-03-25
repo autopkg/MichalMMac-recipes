@@ -19,17 +19,17 @@
     <array>
         <dict>
             <key>Processor</key>
-              <string>PkgRootCreator</string>
-              <key>Arguments</key>
-              <dict>
-                  <key>pkgroot</key>
-                  <string>%RECIPE_CACHE_DIR%/%NAME%/pkg</string>
-                  <key>pkgdirs</key>
-                  <dict>
-                      <key>Applications</key>
-                      <string>0775</string>
-                  </dict>
-              </dict>
+            <string>PkgRootCreator</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkgroot</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%/pkg</string>
+                <key>pkgdirs</key>
+                <dict>
+                    <key>Applications</key>
+                    <string>0775</string>
+                </dict>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>
@@ -63,7 +63,7 @@
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
-                    <string>com.subtitlesapp.subtitles</string>
+                    <string>com.albertogh.Subtitles</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>

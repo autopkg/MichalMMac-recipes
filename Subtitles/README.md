@@ -4,5 +4,5 @@
 
 ## Notes
 
-- Subtitles.app is [shareware](https://subtitlesapp.com/help/purchasing-subtitles/)
+- Subtitles.app is [paid](https://subtitlesapp.com/help/purchasing-subtitles/) software
 - Sparkle XML [feed](https://subtitlesapp.com/updates.xml) is used to download latest version
