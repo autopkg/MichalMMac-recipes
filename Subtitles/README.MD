@@ -1,6 +1,6 @@
 # Subtitles
 
-Subtitles application tries to find and download external subtitles for provided video files.
+[Subtitles](https://subtitlesapp.com) application tries to find and download external subtitles for provided video files.
 
 ## Notes
 
