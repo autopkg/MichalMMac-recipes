@@ -28,6 +28,8 @@
             <string>%NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>minimum_os_version</key>
+            <string>10.8.0</string>
             <key>blocking_applications</key>
             <array>
                 <string>Deliver2Mac</string>
