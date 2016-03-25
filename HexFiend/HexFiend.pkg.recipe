@@ -33,6 +33,10 @@
         </dict>
         <dict>
             <key>Processor</key>
+            <string>HexFiendPermissionFixProvider</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
