@@ -3,13 +3,18 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Mono Framework MDK.</string>
+    <string>Downloads the current release version of Mono Framework.
+
+For universal 32bit/64bit build use pattern (http.*universal.pkg)
+</string>
     <key>Identifier</key>
-    <string>com.github.michalmmac.download.MonoMDK</string>
+    <string>com.github.michalmmac.download.MonoFramework</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MonoMDK</string>
+        <string>MonoFramework</string>
+        <key>MONOPATTERN</key>
+        <string>(http.*x86.pkg)</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -23,7 +28,7 @@
                 <key>url</key>
                 <string>http://www.mono-project.com/download/#download-mac</string>
                 <key>re_pattern</key>
-                <string>(http.*pkg)</string>
+                <string>%MONOPATTERN%</string>
             </dict>
         </dict>
         <dict>
@@ -38,6 +43,21 @@
          <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>   
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%</string>
+                <key>expected_authority_names</key>
+                <array>
+                    <string>Developer ID Installer: Xamarin Inc</string>
+                    <string>Developer ID Certification Authority</string>
+                    <string>Apple Root CA</string>
+                </array>
+            </dict>
         </dict>
     </array>
 </dict>
