@@ -1,0 +1,58 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Hex Fiend creates s package and imports it into Munki</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.munki.HexFiend</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>HexFiend</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/developer/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>Hex Fiend is a fast and clever hex editor for Mac OS X, written using the Cocoa frameworks. Hex Fiend also provides a framework, allowing "hex views" to be embedded in other applications.</string>
+            <key>category</key>
+            <string>Developer</string>
+            <key>developer</key>
+            <string>Ridiculous Fish</string>
+            <key>display_name</key>
+            <string>%NAME%</string>
+            <key>name</key>
+            <string>%NAME%</string>
+            <key>blocking_applications</key>
+            <array>
+                <string>Hex Fiend</string>
+            </array>
+            <key>unattended_install</key>
+            <true/>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.5.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.pkg.HexFiend</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pkg_path%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
