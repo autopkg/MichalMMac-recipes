@@ -5,3 +5,4 @@
 ## Notes
 
 - CuteClips3 is paid software
+- Sparkle [feed](http://cuteclips3.com/cuteclips3_versioncheck.php) is used to download latest version
