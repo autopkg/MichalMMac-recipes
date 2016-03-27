@@ -3,13 +3,19 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of MonoFramework and installs it</string>
+    <string>Downloads the current release version of MonoFramework and installs it
+    
+Default MONOPATTERN (http.*x86.pkg) downloads 32 bit version of framework.
+For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
+</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.install.MonoFramework</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>MonoFramework</string>
+        <key>MONOPATTERN</key>
+        <string>(http.*x86.pkg)</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
