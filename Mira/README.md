@@ -4,7 +4,7 @@
 
 ## Notes
 
-- Mira paid shareware
+- Mira is paid software
 - Munki recipe specifies RequireRestart pkginfo key because of multiple launchd items (un)loaded by package scripts in user context
 - Scripts do a lot of neat things in user's Library. For example thex disable Plex helper. Installing by Munki or AutoPkg prevents them from doing so. Inspect both scripts before deploying
 
