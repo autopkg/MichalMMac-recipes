@@ -1,9 +1,9 @@
- <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Hex Fiend creates s package and imports it into Munki</string>
+    <string>Downloads the current release version of Hex Fiend creates a package and imports it into Munki</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.HexFiend</string>
     <key>Input</key>

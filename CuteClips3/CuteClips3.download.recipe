@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version CuteClips3</string>
+    <string>Downloads the current release version of CuteClips3</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.CuteClips3</string>
     <key>Input</key>

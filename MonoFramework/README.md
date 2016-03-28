@@ -1,6 +1,6 @@
 # Mono Framework
 
-[Mono Framework](http://www.mono-project.com) is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime. 
+[Mono Framework](http://www.mono-project.com) is an open source implementation of Microsoft's .NET Framework based on the ECMA standards for C# and the Common Language Runtime.
 
 ## Notes
 
