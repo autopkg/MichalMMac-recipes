@@ -1,11 +1,11 @@
 # Mira
 
-[Mira](http://twistedmelon.com/mira/) is Preferences Pane for configuring Apple remote behavior
+[Mira](http://twistedmelon.com/mira/) is Preference Pane for configuring Apple remote behavior
 
 ## Notes
 
 - Mira is paid software
-- Munki recipe specifies RequireRestart pkginfo key because of multiple launchd items (un)loaded by package scripts in user context
+- Munki recipe specifies `RequireRestart` pkginfo key because of multiple launchd items (un)loaded by package scripts in user context
 - Scripts do a lot of neat things in user's Library. For example thex disable Plex helper. Installing by Munki or AutoPkg prevents them from doing so. Inspect both scripts before deploying
 
 ## Scripts
@@ -53,7 +53,7 @@
 
 
     if [ "$filespec" ]
-    then 
+    then
       perl -0777 -p -i -e 's!\t\t\t\t<string>Front Row</string>\n\t\t\t\t<key>.*</key>\n\t\t\t\t<.*>\n\t\t\t\t<key>Type</key>\n\t\t\t\t<integer>2</integer>\n!\t\t\t\t<string>Front Row</string>\n\t\t\t\t<key>Should Repeat</key>\n\t\t\t\t<false/>\n\t\t\t\t<key>Alias</key>\n\t\t\t\t<data>\n\t\t\t\tAAAAAAFAAAIAAQRCb290AAAAAAAAAAAAAAAAAAAAAAAA\n\t\t\t\tAAAAAADJ8hZDSCsAAAAAAOkNRnJvbnQgUm93LmFwcAAA\n\t\t\t\tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\t\t\t\tAAAAAAAAAAAAAAAAAAAAAACJt8aYExUAAAAAAAAAAP//\n\t\t\t\t//8AAAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0aW9u\n\t\t\t\tcwAQAAgAAMnyToMAAAARAAgAAMaYS1UAAAABAAQAAADp\n\t\t\t\tAAIAH0Jvb3Q6QXBwbGljYXRpb25zOkZyb250IFJvdy5h\n\t\t\t\tcHAAAA4AHAANAEYAcgBvAG4AdAAgAFIAbwB3AC4AYQBw\n\t\t\t\tAHAADwAKAAQAQgBvAG8AdAASABpBcHBsaWNhdGlvbnMv\n\t\t\t\tRnJvbnQgUm93LmFwcAATAAEvAP//AAA=\n\t\t\t\t</data>\n\t\t\t\t<key>Type</key>\n\t\t\t\t<integer>1</integer>\n!g' $filespec
     fi
 
@@ -66,7 +66,7 @@
     fi
 
     if [ "$filespec" ]
-    then 
+    then
       perl -0777 -p -i -e 's!\t\t\t\t<string>Front Row</string>\n\t\t\t\t<key>.*</key>\n\t\t\t\t<.*>\n\t\t\t\t<key>Type</key>\n\t\t\t\t<integer>2</integer>\n!\t\t\t\t<string>Front Row</string>\n\t\t\t\t<key>Should Repeat</key>\n\t\t\t\t<false/>\n\t\t\t\t<key>Alias</key>\n\t\t\t\t<data>\n\t\t\t\tAAAAAAFAAAIAAQRCb290AAAAAAAAAAAAAAAAAAAAAAAA\n\t\t\t\tAAAAAADJ8hZDSCsAAAAAAOkNRnJvbnQgUm93LmFwcAAA\n\t\t\t\tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\n\t\t\t\tAAAAAAAAAAAAAAAAAAAAAACJt8aYExUAAAAAAAAAAP//\n\t\t\t\t//8AAAkgAAAAAAAAAAAAAAAAAAAADEFwcGxpY2F0aW9u\n\t\t\t\tcwAQAAgAAMnyToMAAAARAAgAAMaYS1UAAAABAAQAAADp\n\t\t\t\tAAIAH0Jvb3Q6QXBwbGljYXRpb25zOkZyb250IFJvdy5h\n\t\t\t\tcHAAAA4AHAANAEYAcgBvAG4AdAAgAFIAbwB3AC4AYQBw\n\t\t\t\tAHAADwAKAAQAQgBvAG8AdAASABpBcHBsaWNhdGlvbnMv\n\t\t\t\tRnJvbnQgUm93LmFwcAATAAEvAP//AAA=\n\t\t\t\t</data>\n\t\t\t\t<key>Type</key>\n\t\t\t\t<integer>1</integer>\n!g' $filespec
     fi
 
@@ -81,7 +81,7 @@
     for filespec in `grep -rl '<string>com.microsoft.PowerPoint</string>' $HOME/Library/Preferences/mira/Profiles/*`;do
 
       rm $filespec
-  
+
     done
     unset replaceFile
     unset filespec
@@ -104,7 +104,7 @@
       replaceFile=`grep -rl -m 1 '<string>PowerPoint 08</string>' "$filespec"`
 
       if [ "$replaceFile" ]
-      then 
+      then
         perl -0777 -p -i -e 's!<string>PowerPoint 08</string>!<string>PowerPoint</string>!g' $replaceFile
         mv $replaceFile "$HOME/Library/Preferences/mira/Profiles/Microsoft PowerPoint.mpl"
       fi
@@ -120,7 +120,7 @@
       replaceFile=`grep -rl -m 1 '<string>PowerPoint 08</string>' "$filespec"`
 
       if [ "$replaceFile" ]
-      then 
+      then
         perl -0777 -p -i -e 's!<string>PowerPoint 08</string>!<string>PowerPoint</string>!g' $replaceFile
         mv $replaceFile "/Library/Preferences/mira/Profiles/Microsoft PowerPoint.mpl"
       fi
@@ -138,7 +138,7 @@
       replaceFile=`grep -rl -m 1 '<string>Plex</string>' "$filespec"`
 
       if [ "$replaceFile" ]
-      then 
+      then
         cp $replaceFile "$HOME/Library/Preferences/mira/Profiles/Plex-Nine.mpl"
 
         perl -0777 -p -i -e 's!<string>Plex</string>!<string>Plex/Nine</string>!g' "$HOME/Library/Preferences/mira/Profiles/Plex-Nine.mpl"
@@ -161,7 +161,7 @@
       replaceFile=`grep -rl -m 1 '<string>Plex</string>' "$filespec"`
 
       if [ "$replaceFile" ]
-      then 
+      then
         cp $replaceFile "/Library/Preferences/mira/Profiles/Plex-Nine.mpl"
 
         perl -0777 -p -i -e 's!<string>Plex</string>!<string>Plex/Nine</string>!g' "/Library/Preferences/mira/Profiles/Plex-Nine.mpl"
@@ -224,7 +224,7 @@
     tmpIFS=$IFS
     IFS=$'\012'
 
-    #Uninstall Plex Launch Agent 
+    #Uninstall Plex Launch Agent
     #Disable the Plex Helper in Plex prefs file - prevents it taking over Apple remote.
     launchctl unload -w "$HOME/Library/LaunchAgents/com.plexapp.helper.plist"
     launchctl unload -w "$HOME/Library/LaunchAgents/com.plexapp.ht.helper.plist"
@@ -264,7 +264,7 @@
     cp "/Library/PreferencePanes/mira.prefPane/Contents/Resources/extras/Mira Keyboard Extras.xml" "/Library/Application Support/Plex Home Theater/userdata/keymaps/Mira Keyboard Extras.xml"
 
 
-    # Set/force the "Hide Missing Applications" preference to TRUE 
+    # Set/force the "Hide Missing Applications" preference to TRUE
     perl -0777 -p -i -e 's!<key>hide if app missing</key>\n\t<false/>!<key>hide if app missing</key>\n\t<true/>!g' $HOME/Library/Preferences/mira/com.twistedmelon.mira.plist
 
 
@@ -273,8 +273,8 @@
     chmod u+s /Library/PreferencePanes/mira.prefPane/Contents/Resources/miraRCD.app/Contents/MacOS/miraAppSwitcher
 
     chmod -R 777 /Library/Preferences/mira/
-    chmod 777 /Library/Preferences/mira/com.twistedmelon.mira.plist 
-    chown $USER:admin /Library/Preferences/mira/com.twistedmelon.mira.plist 
+    chmod 777 /Library/Preferences/mira/com.twistedmelon.mira.plist
+    chown $USER:admin /Library/Preferences/mira/com.twistedmelon.mira.plist
 
     chown $USER:staff $HOME/Library/Preferences/mira
     chmod -R 775 $HOME/Library/Preferences/mira

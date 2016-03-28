@@ -1,7 +1,7 @@
 # Latexian
 
 [Latexian](http://tacosw.com/latexian/download.php) is neat LaTeX editor with live preview.
- 
+
 ## Notes
 
 - Latexian is paid softwere

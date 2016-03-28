@@ -1,7 +1,7 @@
 # MacGameStore
 
 [MacGameStore](http://www.macgamestore.com) is a client for MacGameStore.com with a lot of OS X games.
- 
+
 ## Notes
 
 - MGSCore5 is dir with current version of MGS application (10.6+)
