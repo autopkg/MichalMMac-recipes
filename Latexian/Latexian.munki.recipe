@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Latexian creates a package and imports it into Munki</string>
+    <string>Downloads the current release version of Latexian creates a package and imports it into Munki.
+
+Latexian has reached EOL (See http://tacosw.com/index.php). Download link might become broken in near future.
+Latexian requires MacTeX (See http://www.tug.org/mactex/).
+</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.Latexian</string>
     <key>Input</key>

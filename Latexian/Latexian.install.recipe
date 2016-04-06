@@ -3,7 +3,11 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Latexian creates a package and installs it</string>
+    <string>Downloads the current release version of Latexian creates a package and installs it.
+
+Latexian has reached EOL (See http://tacosw.com/index.php). Download link might become broken in near future.
+Latexian requires MacTeX (See http://www.tug.org/mactex/).
+</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.install.Latexian</string>
     <key>Input</key>
