@@ -3,7 +3,10 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Mira and installs it</string>
+    <string>Downloads the current release version of Mira and installs it.
+
+Package preinstall and postinstall scripts do a lot of neat things in user's Library. For example thex disable Plex helper. Installing by Munki or AutoPkg prevents them from doing so. Inspect both scripts before deploying.    
+</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.install.Mira</string>
     <key>Input</key>
