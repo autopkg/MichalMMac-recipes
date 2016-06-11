@@ -15,7 +15,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
         <key>NAME</key>
         <string>MonoFramework</string>
         <key>MONOPATTERN</key>
-        <string>(http.*x86.pkg)</string>
+        <string>(http.*.pkg)</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
