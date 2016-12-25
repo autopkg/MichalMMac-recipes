@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>appcast_url</key>
-                <string>https://www.deliver2mac.com/update/update.xml</string>
+                <string>https://www.deliver2.com/update/update.xml</string>
             </dict>
         </dict>
         <dict>
