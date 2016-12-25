@@ -38,9 +38,9 @@
             <key>Arguments</key>
             <dict>
                 <key>input_path</key>
-                <string>%RECIPE_CACHE_DIR%/%NAME%/Hex Fiend.app</string>
+                <string>%pathname%/Hex Fiend.app</string>
                 <key>requirement</key>
-                <string>identifier "com.ridiculousfish.HexFiend" and certificate leaf = H"01cac814b03a9b01e542a56ed0ef7291c91f2f63"</string>
+                <string>anchor apple generic and identifier "com.ridiculousfish.HexFiend" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = QK92QP33YN)</string>
             </dict>
         </dict>
     </array>
