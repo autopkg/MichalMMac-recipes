@@ -41,7 +41,7 @@
     <key>MinimumVersion</key>
     <string>0.5.0</string>
     <key>ParentRecipe</key>
-    <string>com.github.michalmmac.pkg.HexFiend</string>
+    <string>com.github.michalmmac.download.HexFiend</string>
     <key>Process</key>
     <array>
         <dict>
