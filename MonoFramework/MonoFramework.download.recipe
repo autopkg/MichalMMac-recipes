@@ -15,7 +15,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
         <key>NAME</key>
         <string>MonoFramework</string>
         <key>MONOPATTERN</key>
-        <string>(http.*.pkg)</string>
+        <string>(https.*.pkg)</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.4.0</string>
@@ -54,7 +54,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
                 <string>%pathname%</string>
                 <key>expected_authority_names</key>
                 <array>
-                    <string>Developer ID Installer: Xamarin Inc</string>
+                    <string>Developer ID Installer: Xamarin Inc (7V723M9SQ5)</string>
                     <string>Developer ID Certification Authority</string>
                     <string>Apple Root CA</string>
                 </array>
