@@ -4,5 +4,4 @@
 
 ## Notes
 
-- 32 bit version link looks like this: `http://download.mono-project.com/archive/4.2.3/macos-10-x86/MonoFramework-MDK-4.2.3.4.macos10.xamarin.x86.pkg`
-- Universal 32bit/64bit version link looks like this: `http://download.mono-project.com/archive/4.2.1/macos-10-universal/MonoFramework-MDK-4.2.1.102.macos10.xamarin.universal.pkg`
+- Universal 32bit/64bit version link looks like this: `https://download.mono-project.com/archive/4.8.1/macos-10-universal/MonoFramework-MDK-4.8.1.0.macos10.xamarin.universal.pkg`
