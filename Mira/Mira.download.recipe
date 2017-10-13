@@ -42,7 +42,7 @@ Package preinstall and postinstall scripts do a lot of neat things in user's Lib
                 <string>%pathname%/*.pkg</string>
                 <key>expected_authority_names</key>
                 <array>
-                    <string>Developer ID Installer: Twisted Melon Inc.</string>
+                    <string>Developer ID Installer: Twisted Melon Inc. (CSYTM9T3LT)</string>
                     <string>Developer ID Certification Authority</string>
                     <string>Apple Root CA</string>
                 </array>
