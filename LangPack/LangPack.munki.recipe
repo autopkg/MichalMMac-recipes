@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Description</key>
+	<string>Downloads the current release version of LibreOffice and imports into Munki.</string>
+	<key>Identifier</key>
+	<string>LangPack.munki.recipe</string>
+	<key>Input</key>
+	<dict>
+		<key>NAME</key>
+		<string>LibreOffice</string>
+		<key>TYPE</key>
+		<string>mac-x86_64</string>
+		<key>LANGUAGE_CODE</key>
+		<string>cs</string>
+		<key>MUNKI_REPO_SUBDIR</key>
+		<string>apps/Productivity/LibreOffice</string>
+		<key>MUNKI_CATEGORY</key>
+		<string>Productivity</string>
+		<key>pkginfo</key>
+		<dict>
+			<key>catalogs</key>
+			<array>
+				<string>development</string>
+			</array>
+			<key>category</key>
+			<string>%MUNKI_CATEGORY%</string>
+			<key>description</key>
+			<string>Language Pack for LibreOffice (%LANGUAGE_CODE%)</string>
+			<key>developer</key>
+			<string>The Document Foundation</string>
+			<key>display_name</key>
+			<string>LibreOffice Language Pack %LANGUAGE_CODE%</string>
+			<key>name</key>
+			<string>%NAME%_langpack_%LANGUAGE_CODE%</string>
+			<key>update_for</key>
+			<array>
+				<string>LibreOffice</string>
+			</array>
+			<key>unattended_install</key>
+			<true/>
+			<key>unattended_uninstall</key>
+			<true/>
+			<key>blocking_applications</key>
+      <array>
+        <string>%NAME%</string>
+      </array>
+		</dict>
+	</dict>
+	<key>MinimumVersion</key>
+	<string>0.4.0</string>
+	<key>ParentRecipe</key>
+	<string>LangPack.pkg.recipe</string>
+	<key>Process</key>
+	<array>
+		<dict>
+		  <key>Processor</key>
+			<string>MunkiImporter</string>
+			<key>Arguments</key>
+			<dict>
+				<key>pkg_path</key>
+				<string>%pkg_path%</string>
+				<key>repo_subdirectory</key>
+				<string>%MUNKI_REPO_SUBDIR%</string>
+			</dict>
+		</dict>
+		<dict>
+		  <key>Processor</key>
+			<string>PlistEditor</string>
+			<key>Arguments</key>
+			<dict>
+			  <key>input_plist_path</key>
+				<string>%pkginfo_repo_path%</string>
+				<key>output_plist_path</key>
+				<string>%pkginfo_repo_path%</string>
+				<key>plist_data</key>
+				<dict>
+				  <key>requires</key>
+				  <array>
+            <string>%NAME%-%version%</string>
+          </array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
