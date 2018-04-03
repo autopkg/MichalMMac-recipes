@@ -4,9 +4,9 @@
 <dict>
     <key>Description</key>
     <string>Downloads the current release version of MonoFramework and installs it
-    
-Default MONOPATTERN (http.*x86.pkg) downloads 32 bit version of framework.
-For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
+
+Default MONOPATTERN (https.*x86.pkg) downloads 32 bit version of framework.
+For universal 32bit/64bit build use MONOPATTERN (https.*universal.pkg)
 </string>
     <key>Identifier</key>
     <string>com.github.michalmmac.install.MonoFramework</string>

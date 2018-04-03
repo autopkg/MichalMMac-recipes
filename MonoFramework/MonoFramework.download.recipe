@@ -5,8 +5,8 @@
     <key>Description</key>
     <string>Downloads the current release version of Mono Framework.
 
-Default MONOPATTERN (http.*x86.pkg) downloads 32 bit version of framework.
-For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
+Default MONOPATTERN (https.*x86.pkg) downloads 32 bit version of framework.
+For universal 32bit/64bit build use MONOPATTERN (https.*universal.pkg)
 </string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.MonoFramework</string>
@@ -27,7 +27,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.mono-project.com/download/stable</string>
+                <string>https://www.mono-project.com/download/stable</string>
                 <key>re_pattern</key>
                 <string>%MONOPATTERN%</string>
             </dict>
