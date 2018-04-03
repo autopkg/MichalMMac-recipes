@@ -27,7 +27,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.mono-project.com/download/#download-mac</string>
+                <string>http://www.mono-project.com/download/stable</string>
                 <key>re_pattern</key>
                 <string>%MONOPATTERN%</string>
             </dict>
@@ -45,7 +45,7 @@ For universal 32bit/64bit build use MONOPATTERN (http.*universal.pkg)
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
-        <dict>   
+        <dict>
             <key>Processor</key>
             <string>CodeSignatureVerifier</string>
             <key>Arguments</key>
