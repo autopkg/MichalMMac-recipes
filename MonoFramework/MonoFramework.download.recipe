@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Mono Framework from Visual Studio channel .</string>
+    <string>Downloads the current release version of Mono Framework from Visual Studio channel.</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.MonoFramework</string>
     <key>Input</key>
