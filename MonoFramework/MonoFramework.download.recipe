@@ -3,11 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Mono Framework.
-
-Default MONOPATTERN (https.*x86.pkg) downloads 32 bit version of framework.
-For universal 32bit/64bit build use MONOPATTERN (https.*universal.pkg)
-</string>
+    <string>Downloads the current release version of Mono Framework from Visual Studio channel .</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.MonoFramework</string>
     <key>Input</key>

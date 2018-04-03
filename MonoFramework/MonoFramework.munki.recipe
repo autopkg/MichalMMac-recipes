@@ -3,11 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Mono Framework and imports it into Munki
-
-Default MONOPATTERN (https.*x86.pkg) downloads 32 bit version of framework.
-For universal 32bit/64bit build use MONOPATTERN (https.*universal.pkg)
-</string>
+    <string>Downloads the current release version of Mono Framework and imports it into Munki.</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.MonoFramework</string>
     <key>Input</key>
