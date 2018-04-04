@@ -6,6 +6,11 @@
     <string>Downloads the current release version of Rocket.Chat+</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.RocketChat</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>RocketChat</string>
+    </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
     <key>Process</key>
