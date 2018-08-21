@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of FlexiBee client package and installs it.
+
+FlexiBee requires Java environment to run.
+</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.install.FlexiBeeClient</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>FlexiBeeClient</string>
+        <key>BEEURL</key>
+        <string>https://www.flexibee.eu/podpora/stazeni-flexibee/</string>
+        <key>BEEPATTERN</key>
+        <string>https://.*FlexiBee-client.*dmg</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.download.FlexiBeeClient</string>
+    <key>Process</key>
+    <array>
+    <dict>
+        <key>Processor</key>
+        <string>Installer</string>
+        <key>Arguments</key>
+        <dict>
+            <key>pkg_path</key>
+            <string>%pathname%/FlexiBee*.pkg</string>
+        </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
