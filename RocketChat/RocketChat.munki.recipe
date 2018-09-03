@@ -39,7 +39,10 @@
             <key>preinstall_script</key>
             <string>#!/bin/sh
 if [ -e "/Applications/Rocket.Chat+.app" ]; then
-  /bin/mv "/Applications/Rocket.Chat+.app" "/Applications/Rocket.Chat.app"
+  /bin/rm -rf "/Applications/Rocket.Chat+.app"
+fi
+if [ -e "/Applications/Rocket.Chat.app" ]; then
+  /bin/rm -rf "/Applications/Rocket.Chat.app"
 fi
 exit
 </string>
