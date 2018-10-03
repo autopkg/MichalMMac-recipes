@@ -22,6 +22,8 @@
             <dict>
                 <key>github_repo</key>
                 <string>MacPass/MacPass</string>
+                <key>asset_regex</key>
+                <string>(MacPass-[0-9]+.[0-9]+.[0-9]+.zip)</string>
             </dict>
         </dict>
         <dict>
