@@ -9,7 +9,7 @@
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>MonoFramework</string>
+        <string>3CX</string>
         <key>REPATTERN</key>
         <string>(https://downloads-global\.3cx\.com.*\.dmg)</string>
         <key>APPNAME</key>
