@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of 3CX client and imports it into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.munki.3CX</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>MonoFramework</string>
+        <key>REPATTERN</key>
+        <string>(https://downloads-global\.3cx\.com.*\.dmg)</string>
+        <key>APPNAME</key>
+        <string>3CXPhone.app</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/social/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>The 3CX client for Mac allows you to manage and oversee telephone calls directly from your computer and subsequently allows you to work remotely and manage calls through the client interface. The 3CX client for Mac boosts multiple features and provides you the ability to namely; launch and transfer calls, create audio and video conferences, view the availability of colleagues within their organisation, and of course, work remotely.</string>
+            <key>category</key>
+            <string>Social</string>
+            <key>developer</key>
+            <string>3CX</string>
+            <key>display_name</key>
+            <string>3CX client</string>
+            <key>name</key>
+            <string>%NAME%</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.download.3CX</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

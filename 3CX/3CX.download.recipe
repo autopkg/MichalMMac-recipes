@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of 3CX client.</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.download.3CX</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>3CX</string>
+        <key>REPATTERN</key>
+        <string>(https://downloads-global\.3cx\.com.*\.dmg)</string>
+        <key>APPNAME</key>
+        <string>3CXPhone.app</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>https://www.3cx.com/user-manual/installation-mac/</string>
+                <key>re_pattern</key>
+                <string>%REPATTERN%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%match%</string>
+            </dict>
+        </dict>
+         <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/%APPNAME%</string>
+                <key>requirement</key>
+                <string>anchor apple generic and identifier "3cxphone14" and (certificate leaf[field.1.2.840.113635.100.6.1.9] /* exists */ or certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = "33CF4654HL")</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
