@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>RocketChat/Rocket.Chat.Electron</string>
                 <key>asset_regex</key>
-                <string>.*pkg</string>
+                <string>.*[0-9]\.pkg</string>
             </dict>
         </dict>
         <dict>
