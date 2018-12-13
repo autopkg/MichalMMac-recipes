@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of 3CX client.</string>
+    <string>Downloads the current release version of 3CX VOIP client.</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.3CX</string>
     <key>Input</key>
