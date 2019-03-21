@@ -25,7 +25,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>https://www.3cx.com/user-manual/installation-mac/</string>
+                <string>https://www.3cx.com/phone-system/download-links/</string>
                 <key>re_pattern</key>
                 <string>%REPATTERN%</string>
             </dict>
