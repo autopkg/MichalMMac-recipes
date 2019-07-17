@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of client for XPS network coaching service and imports it into Munki.</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.munki.XPS</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>XPS</string>
+        <key>MUNKI_REPO_SUBDIR</key>
+        <string>apps/sports/%NAME%</string>
+        <key>pkginfo</key>
+        <dict>
+            <key>catalogs</key>
+            <array>
+                <string>testing</string>
+            </array>
+            <key>description</key>
+            <string>The tools we create help our customers become more organized and effective, better communicators and better at analyzing their work. Over the past fifteen years we’ve helped coaches and athletes, personal trainers and organizations at all levels, from grassroots to professional teams in elite competitions such as the NBA, NFL and English Premier League, to World and Olympic Champions.</string>
+            <key>category</key>
+            <string>Sports</string>
+            <key>developer</key>
+            <string>Sideline Sports</string>
+            <key>display_name</key>
+            <string>XPS</string>
+            <key>name</key>
+            <string>%NAME%</string>
+        </dict>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.download.XPS</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>MunkiImporter</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+                <key>repo_subdirectory</key>
+                <string>%MUNKI_REPO_SUBDIR%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

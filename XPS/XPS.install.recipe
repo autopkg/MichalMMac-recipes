@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release of client for XPS network coaching service. and installs it.</string>
+    <key>Identifier</key>
+    <string>com.github.michalmmac.install.XPS</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>XPS</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.4.0</string>
+    <key>ParentRecipe</key>
+    <string>com.github.michalmmac.download.XPS</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Installer</string>
+            <key>Arguments</key>
+            <dict>
+                <key>pkg_path</key>
+                <string>%pathname%</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
