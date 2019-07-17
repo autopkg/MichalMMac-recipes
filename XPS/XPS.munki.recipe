@@ -28,6 +28,12 @@
             <string>XPS</string>
             <key>name</key>
             <string>%NAME%</string>
+            <key>unattended_install</key>
+            <true/>
+            <key>blocking_applications</key>
+            <array>
+                <string>XPS</string>
+            </array>
         </dict>
     </dict>
     <key>MinimumVersion</key>
