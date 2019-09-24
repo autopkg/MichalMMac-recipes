@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current version of Airtable</string>
+    <string>Downloads the current version of AirTable</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.Airtable</string>
     <key>Input</key>
