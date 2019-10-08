@@ -3,13 +3,15 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Rocket.Chat+</string>
+    <string>Downloads the current release version of Rocket.Chat</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.RocketChat</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
         <string>RocketChat</string>
+        <key>PATTERN</key>
+        <string>https:.*\.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
@@ -17,38 +19,39 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>GitHubReleasesInfoProvider</string>
+            <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-                <key>github_repo</key>
-                <string>RocketChat/Rocket.Chat.Electron</string>
-                <key>asset_regex</key>
-                <string>.*[0-9]\.pkg</string>
+                <key>url</key>
+                <string>https://rocket.chat/install</string>
+                <key>re_pattern</key>
+                <string>%PATTERN%</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%match%</string>
+            </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
         <dict>
-        <key>Processor</key>
-        <string>CodeSignatureVerifier</string>
-        <key>Arguments</key>
-        <dict>
-            <key>input_path</key>
-            <string>%pathname%</string>
-            <key>expected_authority_names</key>
-            <array>
-                <string>Developer ID Installer: Rocket.Chat Technologies Corp. (S6UPZG7ZR3)</string>
-                <string>Developer ID Certification Authority</string>
-                <string>Apple Root CA</string>
-            </array>
+            <key>Processor</key>
+            <string>CodeSignatureVerifier</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%pathname%/Rocket.Chat.app</string>
+                <key>requirement</key>
+                <string>identifier "chat.rocket" and anchor apple generic and certificate 1[field.1.2.840.113635.100.6.2.6] /* exists */ and certificate leaf[field.1.2.840.113635.100.6.1.13] /* exists */ and certificate leaf[subject.OU] = S6UPZG7ZR3</string>
+            </dict>
         </dict>
-    </dict>
     </array>
 </dict>
 </plist>

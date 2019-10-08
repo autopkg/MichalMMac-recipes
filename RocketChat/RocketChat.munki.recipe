@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Rocket.Chat+ and imports it into Munki</string>
+    <string>Downloads the current release version of Rocket.Chat and imports it into Munki</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.munki.RocketChat</string>
     <key>Input</key>
@@ -19,33 +19,17 @@
                 <string>testing</string>
             </array>
             <key>description</key>
-            <string>Rocket.Chat+ is a RocketChat app for macOS.</string>
+            <string>Rocket.Chat is a RocketChat client app for macOS.</string>
             <key>category</key>
             <string>Communication</string>
             <key>developer</key>
             <string>Rocket.Chat</string>
             <key>display_name</key>
-            <string>Rocket.Chat+</string>
+            <string>Rocket.Chat</string>
             <key>name</key>
             <string>%NAME%</string>
-            <key>minimum_os_version</key>
-            <string>10.9.0</string>
-            <key>blocking_applications</key>
-            <array>
-                <string>Rocket.Chat+</string>
-            </array>
             <key>unattended_install</key>
             <true/>
-            <key>preinstall_script</key>
-            <string>#!/bin/sh
-if [ -e "/Applications/Rocket.Chat+.app" ]; then
-  /bin/rm -rf "/Applications/Rocket.Chat+.app"
-fi
-if [ -e "/Applications/Rocket.Chat.app" ]; then
-  /bin/rm -rf "/Applications/Rocket.Chat.app"
-fi
-exit
-</string>
         </dict>
     </dict>
     <key>MinimumVersion</key>
