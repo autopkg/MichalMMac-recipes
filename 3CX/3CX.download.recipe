@@ -10,8 +10,10 @@
     <dict>
         <key>NAME</key>
         <string>3CX</string>
-        <key>REPATTERN</key>
-        <string>(https://downloads-global\.3cx\.com.*\.dmg)</string>
+        <key>VERSION</key>
+        <string>16</string>
+        <key>DOWNLOAD_LINK</key>
+        <string>https://downloads.3cx.com/downloads/3CXPhoneforMac%VERSION%.dmg</string>
         <key>APPNAME</key>
         <string>3CXPhone.app</string>
     </dict>
@@ -21,22 +23,11 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://www.3cx.com/phone-system/download-links/</string>
-                <key>re_pattern</key>
-                <string>%REPATTERN%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%match%</string>
+                <string>%DOWNLOAD_LINK%</string>
             </dict>
         </dict>
          <dict>
