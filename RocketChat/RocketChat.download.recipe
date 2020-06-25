@@ -11,7 +11,7 @@
         <key>NAME</key>
         <string>RocketChat</string>
         <key>PATTERN</key>
-        <string>https:.*\.dmg</string>
+        <string>https:[^ '"]*\.dmg</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
