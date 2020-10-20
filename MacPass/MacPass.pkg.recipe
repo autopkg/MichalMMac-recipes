@@ -12,72 +12,18 @@
         <string>MacPass</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.5.0</string>
+    <string>1.0.0</string>
     <key>ParentRecipe</key>
     <string>com.github.michalmmac.download.MacPass</string>
     <key>Process</key>
     <array>
         <dict>
             <key>Processor</key>
-              <string>PkgRootCreator</string>
-              <key>Arguments</key>
-              <dict>
-                  <key>pkgroot</key>
-                  <string>%RECIPE_CACHE_DIR%/%NAME%/pkg</string>
-                  <key>pkgdirs</key>
-                  <dict>
-                      <key>Applications</key>
-                      <string>0775</string>
-                  </dict>
-              </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Copier</string>
+            <string>AppPkgCreator</string>
             <key>Arguments</key>
             <dict>
-                <key>source_path</key>
+                <key>app_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%/MacPass.app</string>
-                <key>destination_path</key>
-                <string>%pkgroot%/Applications/MacPass.app</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Versioner</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_plist_path</key>
-                <string>%pkgroot%/Applications/MacPass.app/Contents/Info.plist</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PkgCreator</string>
-            <key>Arguments</key>
-            <dict>
-                <key>pkgname</key>
-                <string>%NAME%-%version%</string>
-                <key>pkg_request</key>
-                <dict>
-                    <key>pkgdir</key>
-                    <string>%RECIPE_CACHE_DIR%</string>
-                    <key>id</key>
-                    <string>com.hicknhack.macpass</string>
-                    <key>options</key>
-                    <string>purge_ds_store</string>
-                    <key>chown</key>
-                    <array>
-                        <dict>
-                            <key>path</key>
-                            <string>Applications</string>
-                            <key>user</key>
-                            <string>root</string>
-                            <key>group</key>
-                            <string>admin</string>
-                        </dict>
-                    </array>
-                </dict>
             </dict>
         </dict>
     </array>
