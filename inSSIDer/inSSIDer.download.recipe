@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://files.metageek.net/downloads/inSSIDer4-installer.dmg</string>
+                <string>https://files.metageek.net/downloads/inSSIDer4-installer.dmg</string>
             </dict>
         </dict>
         <dict>
