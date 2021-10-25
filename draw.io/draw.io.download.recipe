@@ -3,7 +3,8 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current Intel release version of draw.io for arm change %PLATFORM_ARCH% to arm64</string>
+    <string>Downloads the current x86_64 release version of draw.io 
+	for arm change %PLATFORM_ARCH% AND %SUPPORTED_ARCH% to arm64</string>
     <key>Identifier</key>
     <string>com.github.michalmmac.download.draw.io</string>
     <key>Input</key>
@@ -12,6 +13,8 @@
         <string>draw.io</string>
         <key>PLATFORM_ARCH</key>
         <string>x64</string>
+	<key>SUPPORTED_ARCH</key>
+        <string>x86_64</string>
     </dict>
     <key>MinimumVersion</key>
     <string>2.0</string>
