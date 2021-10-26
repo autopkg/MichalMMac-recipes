@@ -36,10 +36,10 @@
             </array>
             <key>unattended_install</key>
             <true/>
-	    <key>supported_architectures</key> 
-	    <array> 
-	        <string>%SUPPORTED_ARCH%</string> 
-	    </array>
+            <key>supported_architectures</key>
+            <array>
+                <string>%SUPPORTED_ARCH%</string>
+            </array>
         </dict>
     </dict>
     <key>MinimumVersion</key>
