@@ -17,22 +17,11 @@
     <array>
         <dict>
             <key>Processor</key>
-            <string>URLTextSearcher</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>https://airtable.com/mac</string>
-                <key>re_pattern</key>
-                <string>https://static.airtable.com/download/macos/Airtable-[.0-9]+dmg</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%match%</string>
+                <string>https://static.airtable.com/download/AirtableInstaller.dmg</string>
             </dict>
         </dict>
         <dict>
