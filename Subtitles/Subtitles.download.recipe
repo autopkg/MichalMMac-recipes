@@ -12,9 +12,18 @@
         <string>Subtitles</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.4.0</string>
+    <string>1.1</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>The Subtitles app website SSL certificate expired in 2023. This recipe is deprecated and will be removed in the future.</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>SparkleUpdateInfoProvider</string>
