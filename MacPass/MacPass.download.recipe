@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of MacPass</string>
     <key>Identifier</key>
-    <string>com.github.michalmmac.download.MacPass</string>
+    <string>com.github.michalmmac.download.MacPassX</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>MacPass/MacPass</string>
                 <key>asset_regex</key>
-                <string>(MacPass-[\d\.]+\.zip)</string>
+                <string>MacPass-[\d\.]+\.zip$</string>
             </dict>
         </dict>
         <dict>
