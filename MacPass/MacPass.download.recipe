@@ -23,7 +23,7 @@
                 <key>github_repo</key>
                 <string>MacPass/MacPass</string>
                 <key>asset_regex</key>
-                <string>(MacPass-[\d\.]+\.zip)</string>
+                <string>MacPass-[\d\.]+\.zip$</string>
             </dict>
         </dict>
         <dict>
